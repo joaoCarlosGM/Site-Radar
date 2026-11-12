@@ -458,7 +458,7 @@
             const campos = ['inp_nome', 'inp_celular', 'inp_email', 'inp_cep']
                 .map(id => document.getElementById(id));
             const invalidos = campos.filter(input => !input.value.trim() ||
-                (input.type === 'email' && !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(input.value.trim())));
+                (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())));
             if (invalidos.length) {
                 marcaErro(invalidos[0]);
                 return;
